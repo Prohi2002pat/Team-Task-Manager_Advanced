@@ -1,0 +1,22 @@
+// const express = require("express");
+// const router = express.Router();
+
+// const { signup, login } = require("../controllers/authController");
+
+// router.post("/signup", signup);
+// router.post("/login", login);
+
+// module.exports = router;
+
+const express = require("express");
+const router = express.Router();
+
+const { signup, login } = require("../controllers/authController");
+const validate = require("../middleware/validate");
+const { signupSchema, loginSchema } = require("../validations/authValidation");
+
+// Added Zod validation to protect the endpoints
+router.post("/signup", validate(signupSchema), signup);
+router.post("/login", validate(loginSchema), login);
+
+module.exports = router;
