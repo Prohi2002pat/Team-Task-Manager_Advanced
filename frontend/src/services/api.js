@@ -10,7 +10,7 @@ import axios from "axios";
 
 // 1. Use Environment Variables for the URL (crucial for deployment)
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "http://team-task-manageradvanced-production.up.railway.app",
+  baseURL: process.env.REACT_APP_API_URL || "https://team-task-manageradvanced-production.up.railway.app/api",
 });
 
 // 2. Request Interceptor: Automatically attach the token to all requests
