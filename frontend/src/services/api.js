@@ -1,11 +1,3 @@
-// import axios from "axios";
-
-// const API = axios.create({
-//   baseURL: "http://localhost:5000/api",
-// });
-
-// export default API;
-
 import axios from "axios";
 
 // 1. Use Environment Variables for the URL (crucial for deployment)
